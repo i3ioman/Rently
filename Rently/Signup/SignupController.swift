@@ -168,11 +168,9 @@ class SignupController: UIViewController {
                                   height: 30, width: 0)
 
            emailTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-            textFieldShouldReturn(passwordTextField)
        }
        
        fileprivate func setupPasswordField() {
-        passwordTextField.tag = 2
            view.addSubview(passwordTextField)
            
            passwordTextField.anchors(top: emailTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0,
@@ -182,7 +180,6 @@ class SignupController: UIViewController {
     
     fileprivate func setupPasswordConfirmField() {
         view.addSubview(passwordConfirmTextField)
-       // passwordConfirmTextField.tag = 3
         
         passwordConfirmTextField.anchors(top: passwordTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0,
                                   left: passwordTextField.leftAnchor, leftPad: 0, right: passwordTextField.rightAnchor, rightPad: 0,
