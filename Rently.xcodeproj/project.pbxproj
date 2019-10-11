@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57E527C234E1C0B00D092E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527B234E1C0B00D092E5 /* Constants.swift */; };
+		B57E527E234E2C6F00D092E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527D234E2C6F00D092E5 /* Extensions.swift */; };
+		B57E5282234E343400D092E5 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E5281234E343400D092E5 /* SignupController.swift */; };
 		B5DA2023234E09D4009F6D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2022234E09D4009F6D1A /* AppDelegate.swift */; };
-		B5DA2025234E09D4009F6D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2024234E09D4009F6D1A /* ViewController.swift */; };
-		B5DA2028234E09D4009F6D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DA2026234E09D4009F6D1A /* Main.storyboard */; };
+		B5DA2025234E09D4009F6D1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2024234E09D4009F6D1A /* LoginController.swift */; };
 		B5DA202A234E09D7009F6D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DA2029234E09D7009F6D1A /* Assets.xcassets */; };
 		B5DA202D234E09D7009F6D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DA202B234E09D7009F6D1A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B57E527B234E1C0B00D092E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B57E527D234E2C6F00D092E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B57E5281234E343400D092E5 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		B5DA201F234E09D4009F6D1A /* Rently.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rently.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DA2022234E09D4009F6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5DA2024234E09D4009F6D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B5DA2027234E09D4009F6D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5DA2024234E09D4009F6D1A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B5DA2029234E09D7009F6D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5DA202C234E09D7009F6D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DA202E234E09D7009F6D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B57E527A234E1BF700D092E5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B57E527B234E1C0B00D092E5 /* Constants.swift */,
+				B57E527D234E2C6F00D092E5 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B57E527F234E33F000D092E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B5DA2024234E09D4009F6D1A /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B57E5280234E33FE00D092E5 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				B57E5281234E343400D092E5 /* SignupController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		B5DA2016234E09D4009F6D1A = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +83,10 @@
 		B5DA2021234E09D4009F6D1A /* Rently */ = {
 			isa = PBXGroup;
 			children = (
+				B57E5280234E33FE00D092E5 /* Signup */,
+				B57E527F234E33F000D092E5 /* Login */,
+				B57E527A234E1BF700D092E5 /* Utils */,
 				B5DA2022234E09D4009F6D1A /* AppDelegate.swift */,
-				B5DA2024234E09D4009F6D1A /* ViewController.swift */,
-				B5DA2026234E09D4009F6D1A /* Main.storyboard */,
 				B5DA2029234E09D7009F6D1A /* Assets.xcassets */,
 				B5DA202B234E09D7009F6D1A /* LaunchScreen.storyboard */,
 				B5DA202E234E09D7009F6D1A /* Info.plist */,
@@ -124,7 +154,6 @@
 			files = (
 				B5DA202D234E09D7009F6D1A /* LaunchScreen.storyboard in Resources */,
 				B5DA202A234E09D7009F6D1A /* Assets.xcassets in Resources */,
-				B5DA2028234E09D4009F6D1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5DA2025234E09D4009F6D1A /* ViewController.swift in Sources */,
+				B5DA2025234E09D4009F6D1A /* LoginController.swift in Sources */,
 				B5DA2023234E09D4009F6D1A /* AppDelegate.swift in Sources */,
+				B57E527C234E1C0B00D092E5 /* Constants.swift in Sources */,
+				B57E5282234E343400D092E5 /* SignupController.swift in Sources */,
+				B57E527E234E2C6F00D092E5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B5DA2026234E09D4009F6D1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5DA2027234E09D4009F6D1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B5DA202B234E09D7009F6D1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XT93FNQRH9;
 				INFOPLIST_FILE = Rently/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XT93FNQRH9;
 				INFOPLIST_FILE = Rently/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
