@@ -11,14 +11,26 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    let logoField: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "RentlyLogo")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+       // imageView.centerXAnchor.constraint(lessThanOrEqualTo: imageView.superview!.centerXAnchor).isActive = true
+        return imageView
+    }()
+    
+    
     
     let emailTextField: UITextField = {
         let e = UITextField()
         
-        let attributedPlaceholder = NSAttributedString(string: "email", attributes:
+        e.setRightPaddingPoints(10)
+        
+        let attributedPlaceholder = NSAttributedString(string: "  email", attributes:
             [NSAttributedString.Key.foregroundColor : UIColor.white])
         
-        
+            e.tintColor = UIColor.white
+            e.setIcon(UIImage(named: "mail")!)
             e.textColor = .white
             e.attributedPlaceholder = attributedPlaceholder
             e.setBottomBorder(backgroundColor: MAIN_THEME, borderColor: .white)
@@ -28,10 +40,11 @@ class LoginController: UIViewController {
     let passwordTextField: UITextField = {
         let p = UITextField()
         
-        let attributedPlaceholder = NSAttributedString(string: "password", attributes:
+        let attributedPlaceholder = NSAttributedString(string: "  password", attributes:
             [NSAttributedString.Key.foregroundColor : UIColor.white])
         
         
+            p.setIcon(UIImage(named: "lock")!)
             p.textColor = .white
             p.attributedPlaceholder = attributedPlaceholder
             p.isSecureTextEntry = true
@@ -94,6 +107,7 @@ class LoginController: UIViewController {
 
         view.backgroundColor = MAIN_THEME
         
+        
         navigationController?.isNavigationBarHidden = true
         
         setupTextFieldComponents()
@@ -101,10 +115,59 @@ class LoginController: UIViewController {
         setupForgotPasswordButton()
         setupHaveAnAccountButton()
         
+        // Listen for keyboard events
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
         // Dismiss keyboard by tapping on the storyboard
                let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
                view.addGestureRecognizer(tap)
     }
+    
+    deinit {
+           // Stop listening for keyboard hide/show events
+           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
+       }
+       
+       // Move the UI with the keyboard
+       @objc func keyboardWillChange(notification: Notification) {
+           guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+               return
+           }
+           if notification.name == UIResponder.keyboardWillShowNotification ||
+               notification.name == UIResponder.keyboardWillChangeFrameNotification {
+               
+               view.frame.origin.y = -30
+           } else {
+               view.frame.origin.y = 0
+           }
+           
+           
+           
+           
+       }
+       
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           let nextTag = textField.tag + 1
+           // Try to find next responder
+           let nextResponder = textField.superview?.viewWithTag(nextTag) as UIResponder?
+
+           if nextResponder != nil {
+               // Found next responder, so set it
+               nextResponder?.becomeFirstResponder()
+           } else {
+               // Not found, so remove keyboard
+               textField.resignFirstResponder()
+           }
+
+           return false
+       }
+       
 
     override var preferredStatusBarStyle: UIStatusBarStyle {       // Hide the navigation bar
         return .lightContent
@@ -130,6 +193,7 @@ class LoginController: UIViewController {
     fileprivate func setupTextFieldComponents() {
         setupEmailField()
         setupPasswordField()
+        setupLogoField()
     }
     
     fileprivate func setupEmailField() {
@@ -148,6 +212,14 @@ class LoginController: UIViewController {
         passwordTextField.anchors(top: emailTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0,
                                   left: emailTextField.leftAnchor, leftPad: 0, right: emailTextField.rightAnchor, rightPad: 0,
                                   height: 30, width: 0)
+    }
+    
+    fileprivate func setupLogoField() {
+        view.addSubview(logoField)
+        
+        logoField.anchors(top: nil, topPad: 0, bottom: emailTextField.topAnchor, bottomPad: 10, left: view.safeAreaLayoutGuide.leftAnchor, leftPad: 55, right: nil, rightPad: 0, height: 300, width: 300)
+        
+        
     }
     
     fileprivate func setupLoginButton() {

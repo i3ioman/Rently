@@ -36,7 +36,7 @@ class LoggedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        view.backgroundColor = MAIN_THEME
         
         setupGobackButton()
         
