@@ -47,6 +47,9 @@ class LoginController: UIViewController {
             l.setTitle("Log in", for: .normal)
             l.layer.cornerRadius = 10
         l.backgroundColor = UIColor.rgb(r: 89, g: 156, b: 120)
+        
+        l.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
+        
         return l
     }()
     
@@ -105,6 +108,12 @@ class LoginController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {       // Hide the navigation bar
         return .lightContent
+    }
+    
+    @objc func loginAction() {
+        print("Logged in")
+        let loggedcontroller = LoggedController()
+        navigationController?.pushViewController(loggedcontroller, animated: true)
     }
     
     @objc func signupAction() {

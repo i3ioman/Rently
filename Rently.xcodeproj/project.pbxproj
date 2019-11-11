@@ -10,6 +10,7 @@
 		B57E527C234E1C0B00D092E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527B234E1C0B00D092E5 /* Constants.swift */; };
 		B57E527E234E2C6F00D092E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527D234E2C6F00D092E5 /* Extensions.swift */; };
 		B57E5282234E343400D092E5 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E5281234E343400D092E5 /* SignupController.swift */; };
+		B5C3B3992379842B00AB67A6 /* LoggedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3B3982379842B00AB67A6 /* LoggedController.swift */; };
 		B5DA2023234E09D4009F6D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2022234E09D4009F6D1A /* AppDelegate.swift */; };
 		B5DA2025234E09D4009F6D1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2024234E09D4009F6D1A /* LoginController.swift */; };
 		B5DA202A234E09D7009F6D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DA2029234E09D7009F6D1A /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		B57E527B234E1C0B00D092E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B57E527D234E2C6F00D092E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B57E5281234E343400D092E5 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		B5C3B3982379842B00AB67A6 /* LoggedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedController.swift; sourceTree = "<group>"; };
 		B5DA201F234E09D4009F6D1A /* Rently.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rently.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DA2022234E09D4009F6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5DA2024234E09D4009F6D1A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
+		B5C3B395237983E700AB67A6 /* Logged */ = {
+			isa = PBXGroup;
+			children = (
+				B5C3B3982379842B00AB67A6 /* LoggedController.swift */,
+			);
+			path = Logged;
+			sourceTree = "<group>";
+		};
 		B5DA2016234E09D4009F6D1A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		B5DA2021234E09D4009F6D1A /* Rently */ = {
 			isa = PBXGroup;
 			children = (
+				B5C3B395237983E700AB67A6 /* Logged */,
 				B57E5280234E33FE00D092E5 /* Signup */,
 				B57E527F234E33F000D092E5 /* Login */,
 				B57E527A234E1BF700D092E5 /* Utils */,
@@ -167,6 +178,7 @@
 				B5DA2025234E09D4009F6D1A /* LoginController.swift in Sources */,
 				B5DA2023234E09D4009F6D1A /* AppDelegate.swift in Sources */,
 				B57E527C234E1C0B00D092E5 /* Constants.swift in Sources */,
+				B5C3B3992379842B00AB67A6 /* LoggedController.swift in Sources */,
 				B57E5282234E343400D092E5 /* SignupController.swift in Sources */,
 				B57E527E234E2C6F00D092E5 /* Extensions.swift in Sources */,
 			);
