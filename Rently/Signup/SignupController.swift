@@ -10,6 +10,8 @@ import UIKit
 
 class SignupController: UIViewController {
     
+    
+    
     let emailTextField: UITextField = {
         let e = UITextField()
         
@@ -90,6 +92,7 @@ class SignupController: UIViewController {
         view.backgroundColor = MAIN_THEME
         
         navigationController?.isNavigationBarHidden = true
+        
                
         setupTextFieldComponents()
         setupConfirmButton()
@@ -186,6 +189,7 @@ class SignupController: UIViewController {
                                   height: 30, width: 0)
     }
     
+
     
     fileprivate func setupConfirmButton() {
         view.addSubview(confirmButton)
@@ -212,6 +216,12 @@ class SignupController: UIViewController {
                                     left: view.leftAnchor, leftPad: 0, right: view.rightAnchor,
                                     rightPad: 0, height: 30, width: 0)
     }
+    
+
+    
+
 
 }
+
+
 

@@ -3,24 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B57E527C234E1C0B00D092E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527B234E1C0B00D092E5 /* Constants.swift */; };
 		B57E527E234E2C6F00D092E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E527D234E2C6F00D092E5 /* Extensions.swift */; };
 		B57E5282234E343400D092E5 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E5281234E343400D092E5 /* SignupController.swift */; };
+		B581980C237B582200B34B4F /* setupAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = B581980A237B582200B34B4F /* setupAnim.json */; };
+		B581980D237B582200B34B4F /* loadAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = B581980B237B582200B34B4F /* loadAnim.json */; };
 		B5C3B3992379842B00AB67A6 /* LoggedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3B3982379842B00AB67A6 /* LoggedController.swift */; };
 		B5DA2023234E09D4009F6D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2022234E09D4009F6D1A /* AppDelegate.swift */; };
 		B5DA2025234E09D4009F6D1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA2024234E09D4009F6D1A /* LoginController.swift */; };
 		B5DA202A234E09D7009F6D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DA2029234E09D7009F6D1A /* Assets.xcassets */; };
 		B5DA202D234E09D7009F6D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DA202B234E09D7009F6D1A /* LaunchScreen.storyboard */; };
+		BD3C5E06545D8F5863F06952 /* Pods_Rently.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B04C80ADBD197E232ADE420 /* Pods_Rently.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FBC9C27D5C179020DA2B5E4 /* Pods-Rently.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rently.release.xcconfig"; path = "Target Support Files/Pods-Rently/Pods-Rently.release.xcconfig"; sourceTree = "<group>"; };
+		5B04C80ADBD197E232ADE420 /* Pods_Rently.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rently.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57E527B234E1C0B00D092E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B57E527D234E2C6F00D092E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B57E5281234E343400D092E5 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		B581980A237B582200B34B4F /* setupAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = setupAnim.json; sourceTree = "<group>"; };
+		B581980B237B582200B34B4F /* loadAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadAnim.json; sourceTree = "<group>"; };
 		B5C3B3982379842B00AB67A6 /* LoggedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedController.swift; sourceTree = "<group>"; };
 		B5DA201F234E09D4009F6D1A /* Rently.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rently.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DA2022234E09D4009F6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		B5DA2029234E09D7009F6D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5DA202C234E09D7009F6D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DA202E234E09D7009F6D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D260EA2F3B4256EBC43CB25B /* Pods-Rently.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rently.debug.xcconfig"; path = "Target Support Files/Pods-Rently/Pods-Rently.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3C5E06545D8F5863F06952 /* Pods_Rently.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		860FD1E8FE0C005E81FDFF06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B04C80ADBD197E232ADE420 /* Pods_Rently.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B57E527A234E1BF700D092E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +96,8 @@
 			children = (
 				B5DA2021234E09D4009F6D1A /* Rently */,
 				B5DA2020234E09D4009F6D1A /* Products */,
+				BE99E92F7298070EE28C92B5 /* Pods */,
+				860FD1E8FE0C005E81FDFF06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +112,7 @@
 		B5DA2021234E09D4009F6D1A /* Rently */ = {
 			isa = PBXGroup;
 			children = (
+				B5F7929F237B5714007DC9E5 /* Animations */,
 				B5C3B395237983E700AB67A6 /* Logged */,
 				B57E5280234E33FE00D092E5 /* Signup */,
 				B57E527F234E33F000D092E5 /* Login */,
@@ -105,6 +125,24 @@
 			path = Rently;
 			sourceTree = "<group>";
 		};
+		B5F7929F237B5714007DC9E5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B581980B237B582200B34B4F /* loadAnim.json */,
+				B581980A237B582200B34B4F /* setupAnim.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		BE99E92F7298070EE28C92B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D260EA2F3B4256EBC43CB25B /* Pods-Rently.debug.xcconfig */,
+				4FBC9C27D5C179020DA2B5E4 /* Pods-Rently.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5DA2031234E09D7009F6D1A /* Build configuration list for PBXNativeTarget "Rently" */;
 			buildPhases = (
+				87E1F6209657E3C151D94A8C /* [CP] Check Pods Manifest.lock */,
 				B5DA201B234E09D4009F6D1A /* Sources */,
 				B5DA201C234E09D4009F6D1A /* Frameworks */,
 				B5DA201D234E09D4009F6D1A /* Resources */,
+				0262C3A3AA416C1685C9875C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,11 +204,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DA202D234E09D7009F6D1A /* LaunchScreen.storyboard in Resources */,
+				B581980C237B582200B34B4F /* setupAnim.json in Resources */,
+				B581980D237B582200B34B4F /* loadAnim.json in Resources */,
 				B5DA202A234E09D7009F6D1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0262C3A3AA416C1685C9875C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rently/Pods-Rently-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rently/Pods-Rently-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rently/Pods-Rently-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E1F6209657E3C151D94A8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rently-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5DA201B234E09D4009F6D1A /* Sources */ = {
@@ -316,6 +400,7 @@
 		};
 		B5DA2032234E09D7009F6D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D260EA2F3B4256EBC43CB25B /* Pods-Rently.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +420,7 @@
 		};
 		B5DA2033234E09D7009F6D1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FBC9C27D5C179020DA2B5E4 /* Pods-Rently.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
